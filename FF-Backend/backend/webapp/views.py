@@ -127,9 +127,9 @@ def webscrapping(request,Ticker):
 			       f'q={Ticker}&'
 			       'from=2021-05-02&'
 			       'sortBy=popularity&'
-			       'apiKey=c93864d3342d487997cd411e1feb8cbe') # enter api key
+			       'apiKey=bcc9bdba3c804f51afe212d97f9a8eed') # enter api key
 			
-			ml= MonkeyLearn("255100118fc2303250195e2a97d0cd889f8cc8aa") # enter api key
+			ml= MonkeyLearn("ef5e94ee3ee835c0be47f78ec3d6170f373a6d22") # enter api key
 			model_id = 'cl_pi3C7JiL' # keep model id same
 			response = requests.get(url)
 			json_dict=(response.json())

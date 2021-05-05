@@ -7,7 +7,15 @@ export default class Table extends React.Component {
     name: '',
     startdate: '',
     enddate: '',
+    table : {
+        'negativity':0,
+        'neutrality':0,
+        'positivity':0,
+        'predictedClose':0
+    },
+    showInfo: false
   }
+
 
   handleChange = event => {
     this.setState({ name: event.target.value });
@@ -20,12 +28,9 @@ export default class Table extends React.Component {
     event.preventDefault();
 
     APIService.webScrapping(this.state.name).then(data=>{
-        console.log(data)
+        this.setState({table:data})
+        this.setState({showInfo:true})
      })
-    APIService.predict(this.state.name).then(data=>{
-        console.log(data)
-     })
-
   }
 
   render() {
@@ -46,6 +51,8 @@ export default class Table extends React.Component {
           </label>
           <button type="submit" onClick={this.handleSubmit}>Submit</button>
         </form>
+        {this.state.showInfo?
+        <p>{this.state.table.negativity}</p>:<p></p>}
       </div>
     )
   }

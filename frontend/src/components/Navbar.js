@@ -47,7 +47,16 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Table
+                Stocks History
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/predictions'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Stocks Predictions
               </Link>
             </li>
             <li className='nav-item'>
@@ -67,3 +76,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

@@ -8,7 +8,7 @@ export default class APIService{
               'Content-Type':'application/json',
             },
         }).then(resp=>resp.json())
-        .then(data => console.log(data));
+        .then(data=>console.log(data));
 
     }
 
@@ -20,7 +20,7 @@ export default class APIService{
               'Content-Type':'application/json',
             },
         }).then(resp=>resp.json())
-        .then(data => console.log(data));
+        .then(data=>console.log(data));
 
     }
 
@@ -30,8 +30,7 @@ export default class APIService{
             headers:{
               'Content-Type':'application/json',
             },
-        }).then(resp=>resp.json())
-        .then(data => console.log(data));
+        }).then(data=>data.json());
     }
 
     static predict(ticker){
@@ -42,7 +41,7 @@ export default class APIService{
               'Content-Type':'application/json',
             },
         }).then(resp=>resp.json())
-        .then(data => console.log(data));
+        .then(data=>console.log(data));
 
     }
     
